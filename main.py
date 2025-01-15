@@ -17,3 +17,9 @@ if uploaded_file is not None:
     st.write(df.head(3))
 
     prompt=st.text_area("Enter your prompt:")
+
+    if st.button("Generate"):
+        if prompt:
+            st.write("PandasAI is generating an answer, please wait...")
+        else:
+            st.warning("Please enter a prompt.")  
