@@ -1,4 +1,5 @@
-python-dotenv
-pandas
-pandasai
+python-dotenv==1.0.0
+pandas==1.5.3
+pandasai==0.4.0
+
 
