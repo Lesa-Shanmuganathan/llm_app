@@ -7,6 +7,7 @@ from pandasai.llm.openai import OpenAI
 
 
 
+
 load_dotenv()
 API_KEY= os.environ['OPENAI_API_KEY']
 
