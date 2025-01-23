@@ -1,5 +1,5 @@
 python-dotenv
-pandasai==1.4.1
+pandasai
 
 
 
