@@ -2,13 +2,16 @@ from dotenv import load_dotenv
 import os 
 import streamlit as st
 import pandas as pd
-
+from pandasai import PandasAI
+from pandasai.llm.openai import OpenAI
 
 
 
 load_dotenv()
 API_KEY= os.environ['OPENAI_API_KEY']
 
+llm=OpenAI(api_token=API_KEY)
+pandas_ai=PandasAI(llm)
 
 
 st.title("Prompt-driven analysis with PandasAI")
@@ -23,6 +26,6 @@ if uploaded_file is not None:
     if st.button("Generate"):
         if prompt:
             st.write("PandasAI is generating an answer, please wait...")
-           
+            st.write(pandas_ai.run(df, prompt=prompt))
         else:
-            st.warning("Please enter a prompt.")  
+            st.warning("Please enter a prompt.")    
