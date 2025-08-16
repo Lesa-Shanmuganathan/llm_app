@@ -1,6 +1,8 @@
+streamlit
 python-dotenv
-
-
-
-
-
+pandas
+numpy
+matplotlib
+seaborn
+plotly
+openai
